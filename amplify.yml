@@ -1,0 +1,24 @@
+
+version: 1
+backend:
+  phases:
+    build:
+      commands:
+        - npm install
+frontend:
+  phases:
+    preBuild:
+      commands:
+        - nvm install 18.19.0
+        - nvm use 18.19.0
+        - npm install
+    build:
+      commands:
+        - npm run build
+  artifacts:
+    baseDirectory: dist
+    files:
+      - '**/*'
+  cache:
+    paths:
+      - node_modules/**/*

@@ -14,9 +14,9 @@ frontend:
         - npm install
     build:
       commands:
-        - npm run build
+        - npm run build -- --configuration production
   artifacts:
-    baseDirectory: dist
+    baseDirectory: dist/retailbridge/browser
     files:
       - '**/*'
   cache:

@@ -121,8 +121,8 @@ body {
 }
 
 .aboutus-section .aboutus-text {
+  text-align: left; /* Ensure left-aligned text */
   flex: 0.3; /* Make text section 30% width */
-  text-align: center; /* Center-align the text */
   background: linear-gradient(to right, rgba(34, 34, 34, 0.95), rgba(34, 34, 34, 0.6)); /* Semi-transparent fade towards the right */
   color: white;
   border-radius: 10px 0 0 10px; /* Rounded edges on the left only */
@@ -245,4 +245,14 @@ body {
     margin-bottom: 20px; /* Add spacing between stacked sections */
   }
 
+}
+
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2rem !important; /* Scale down header for mobile */
+  }
+
+  .hero-content p, .hero-services p, .aboutus-text p {
+    font-size: 1rem !important; /* Adjust paragraph font size */
+  }
 }

@@ -1,7 +1,7 @@
 <!-- Header Panel -->
 <div class="header-panel">
   <div class="logo">
-<!--    <img src="assets/logo.jpg" alt="Company Logo" />-->
+    <!-- <img src="assets/logo.jpg" alt="Company Logo" /> -->
   </div>
   <div class="company-info">
     <h1>Retail Bridge</h1>
@@ -41,20 +41,63 @@
   </div>
 </div>
 
-
 <!-- Objective and Contact Us Section -->
 <div class="side-by-side-sections">
+  <!-- Objective Section -->
   <div class="panel">
     <h2>Objective</h2>
-    <p>Our goal is to deliver cutting-edge technology...</p>
+    <p>Our goal is to deliver cutting-edge technology solutions that empower businesses to thrive in a competitive market. We aim to simplify complex processes, enhance efficiency, and drive innovation through seamless integration and data-driven insights.</p>
   </div>
-  <div class="panel">
-    <h2>Contact Us</h2>
-    <p>Email: inforetailbridge.com | Phone: +1-800-555-0199</p>
-  </div>
-</div>
 
+  <!-- Contact Us Section -->
 
+        <div class="panel p-4">
+          <h2 class="text-center mb-4">Contact Us</h2>
+          <form #contactForm="ngForm" (ngSubmit)="sendEmail(contactForm)" novalidate>
+            <!-- Full Name -->
+            <div class="mb-3">
+              <label for="fullName" class="form-label">Full Name <span class="text-danger">*</span></label>
+              <input type="text" class="form-control" id="fullName" name="fullName" [(ngModel)]="contactData['fullName']" required>
+              <div class="text-danger" *ngIf="contactForm.submitted && !contactForm.controls['fullName']?.valid">
+                Full name is required.
+              </div>
+            </div>
+
+            <!-- Company Name -->
+            <div class="mb-3">
+              <label for="company" class="form-label">Company Name</label>
+              <input type="text" class="form-control" id="company" name="company" [(ngModel)]="contactData['company']">
+            </div>
+
+            <!-- Phone Number -->
+            <div class="mb-3">
+              <label for="phoneNumber" class="form-label">Phone Number <span class="text-danger">*</span></label>
+              <input type="tel" class="form-control" id="phoneNumber" name="phoneNumber" [(ngModel)]="contactData['phoneNumber']" required>
+              <div class="text-danger" *ngIf="contactForm.submitted && !contactForm.controls['phoneNumber']?.valid">
+                Phone number is required.
+              </div>
+            </div>
+
+            <!-- Email -->
+            <div class="mb-3">
+              <label for="email" class="form-label">Email <span class="text-danger">*</span></label>
+              <input type="email" class="form-control" id="email" name="email" [(ngModel)]="contactData['email']" required>
+              <div class="text-danger" *ngIf="contactForm.submitted && !contactForm.controls['email']?.valid">
+                Valid email is required.
+              </div>
+            </div>
+
+            <!-- Message -->
+            <div class="mb-3">
+              <label for="message" class="form-label">Brief Message</label>
+              <textarea class="form-control" id="message" name="message" rows="4" [(ngModel)]="contactData['message']"></textarea>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" class="btn btn-primary w-100">Submit</button>
+          </form>
+        </div>
+      </div>
 
 
 <!-- Footer -->

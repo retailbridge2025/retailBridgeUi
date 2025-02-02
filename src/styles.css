@@ -1,7 +1,7 @@
 /* Apply 1cm space for the entire webpage */
 body {
   margin: 0 auto; /* Center the content */
-  width: calc(100% - 2cm); /* Ensure 1cm free space on both sides */
+  width: calc(100% - 0.5cm); /* Reduce to 0.25cm free space on both sides */
   box-sizing: border-box; /* Include padding and border in width calculations */
 }
 
@@ -44,6 +44,22 @@ body {
   margin: 0;
   color: white; /* Make the theme text white */
   font-style: italic; /* Set theme text to italic */
+}
+
+/* Center company info on mobile view */
+@media (max-width: 768px) {
+  .header-panel {
+    justify-content: center; /* Center the content horizontally */
+    text-align: center; /* Center the text */
+  }
+
+  .header-panel .company-info {
+    align-items: center; /* Center the company info */
+  }
+
+  .hero-services {
+    display: none; /* Hide hero-services in mobile view */
+  }
 }
 
 /* Hero Section */
@@ -116,7 +132,7 @@ body {
   display: flex; /* Align text and video side by side */
   align-items: stretch; /* Make both sections equal height */
   justify-content: space-between; /* Ensure balance between text and video */
-  margin-top: 20px; /* Space above the section */
+  margin-top: 5px; /* Further reduced space above the section */
   position: relative;
 }
 
@@ -131,9 +147,9 @@ body {
   flex-direction: column;
   justify-content: center;
   backdrop-filter: blur(8px);
-  padding-left: 0.5cm;
-  padding-right: 0.5cm;
-  margin-right: -10px; /* Slight overlap into video section */
+  padding-left: 0.2cm; /* Further reduced padding */
+  padding-right: 0.2cm; /* Further reduced padding */
+  margin-right: -5px; /* Further reduced overlap into video section */
 }
 
 .aboutus-section .aboutus-video-container {
@@ -156,8 +172,8 @@ body {
 .side-by-side-sections {
   display: flex;
   justify-content: space-between;
-  gap: 0; /* No gap between the sections */
-  margin-top: 20px;
+  gap: 1px; /* Minimized gap between sections */
+  margin-top: 5px; /* Further reduced space above the section */
 }
 
 .side-by-side-sections .panel:first-child {
@@ -167,6 +183,7 @@ body {
   background: linear-gradient(to right, rgba(34, 34, 34, 0.95), rgba(34, 34, 34, 0.6)); /* Semi-transparent fade */
   box-shadow: 0px 6px 15px rgba(255, 255, 255, 0.5); /* Gloss effect */
   backdrop-filter: blur(8px);
+  padding: 20px; /* Further reduced padding */
 }
 
 .side-by-side-sections .panel:last-child {
@@ -176,14 +193,15 @@ body {
   background: linear-gradient(to right, rgba(34, 34, 34, 0.95), rgba(34, 34, 34, 0.6)); /* Semi-transparent fade */
   box-shadow: 0px 6px 15px rgba(255, 255, 255, 0.5); /* Gloss effect */
   backdrop-filter: blur(8px);
+  padding: 20px; /* Further reduced padding */
 }
 
 /* Contact Us Section - Semi-transparent Background */
 .panel {
   color: white;
-  padding: 50px;
+  padding: 20px; /* Further reduced padding to decrease gap */
   text-align: center;
-  margin: 20px 0;
+  margin: 2px 0; /* Further reduced margin to decrease gap */
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   position: relative;
 }
@@ -194,6 +212,7 @@ body {
   color: white;
   padding: 20px 0;
   text-align: center; /* Center-align footer content */
+  border-radius: 10px; /* Rounded edges for the footer */
 }
 
 .footer .social-media {
@@ -215,6 +234,16 @@ body {
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {
+  .aboutus-section {
+    flex-direction: column; /* Stack video below text on smaller screens */
+  }
+
+  .aboutus-section .aboutus-text,
+  .aboutus-section .aboutus-video-container {
+    width: 100%; /* Full width for both sections on mobile */
+    flex: none; /* Disable flex behavior */
+  }
+
   .side-by-side-sections {
     flex-direction: column; /* Stack sections vertically on smaller screens */
   }

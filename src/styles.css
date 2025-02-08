@@ -190,6 +190,8 @@ body {
   box-shadow: 0px 6px 15px rgba(255, 255, 255, 0.5); /* Gloss effect */
   backdrop-filter: blur(8px);
   padding: 20px; /* Further reduced padding */
+  text-align: center; /* Center align text inside panels */
+
 }
 
 .side-by-side-sections .panel:last-child {
@@ -238,8 +240,11 @@ body {
   color: #ff9800; /* Orange hover effect */
 }
 .aboutus-text p {
-  font-size: large; /* Increased font size for better readability */
+  font-size: xxx-large; /* Increased font size for better readability */
   line-height: 1.8;
+}
+.side-by-side-sections .panel p{
+  font-size: large;
 }
 /* Responsive Adjustments */
 @media (max-width: 768px) {

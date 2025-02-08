@@ -237,7 +237,10 @@ body {
 .footer .social-media a:hover {
   color: #ff9800; /* Orange hover effect */
 }
-
+.aboutus-text p {
+  font-size: large; /* Increased font size for better readability */
+  line-height: 1.8;
+}
 /* Responsive Adjustments */
 @media (max-width: 768px) {
   .hero-content {
@@ -266,4 +269,9 @@ body {
     width: 100%; /* Full width for both sections on mobile */
     flex: none; /* Disable flex behavior */
   }
+
+  .side-by-side-sections .panel:last-child,.side-by-side-sections .panel:first-child ,.aboutus-section .aboutus-video ,.aboutus-section .aboutus-text{
+      border-radius: 10px 10px 10px 10px; /* Rounded corners only on the right */
+  }
 }
+

@@ -202,6 +202,14 @@ p {
   gap: 1px; /* Minimized gap between sections */
   margin-top: 5px; /* Further reduced space above the section */
 }
+.custom-dialog .mat-dialog-container {
+  border-radius: 15px;
+  background: #f2f2f2; /* Light grey background to match contact form */
+  color: #333;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
 
 .side-by-side-sections .panel:first-child {
   flex: 2; /* Broader width for Objective div */

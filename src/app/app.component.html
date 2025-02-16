@@ -57,45 +57,37 @@
             <!-- Full Name -->
             <div class="mb-3">
               <label for="fullName" class="form-label">Full Name <span class="text-danger">*</span></label>
-              <input type="text" class="form-control" id="fullName" name="fullName" [(ngModel)]="contactData['fullName']" required>
-              <div class="text-danger" *ngIf="contactForm.submitted && !contactForm.controls['fullName']?.valid">
-                Full name is required.
-              </div>
+              <input type="text" class="form-control" id="fullName" name="fullName" [(ngModel)]="contactData.fullName" required>
             </div>
 
             <!-- Company Name -->
             <div class="mb-3">
               <label for="company" class="form-label">Company Name</label>
-              <input type="text" class="form-control" id="company" name="company" [(ngModel)]="contactData['company']">
+              <input type="text" class="form-control" id="company" name="company" [(ngModel)]="contactData.company">
             </div>
 
             <!-- Phone Number -->
             <div class="mb-3">
               <label for="phoneNumber" class="form-label">Phone Number <span class="text-danger">*</span></label>
-              <input type="tel" class="form-control" id="phoneNumber" name="phoneNumber" [(ngModel)]="contactData['phoneNumber']" required>
-              <div class="text-danger" *ngIf="contactForm.submitted && !contactForm.controls['phoneNumber']?.valid">
-                Phone number is required.
-              </div>
+              <input type="tel" class="form-control" id="phoneNumber" name="phoneNumber" [(ngModel)]="contactData.phoneNumber" required>
             </div>
 
             <!-- Email -->
             <div class="mb-3">
               <label for="email" class="form-label">Email <span class="text-danger">*</span></label>
-              <input type="email" class="form-control" id="email" name="email" [(ngModel)]="contactData['email']" required>
-              <div class="text-danger" *ngIf="contactForm.submitted && !contactForm.controls['email']?.valid">
-                Valid email is required.
-              </div>
+              <input type="email" class="form-control" id="email" name="email" [(ngModel)]="contactData.email" required>
             </div>
 
             <!-- Message -->
             <div class="mb-3">
               <label for="message" class="form-label">Brief Message</label>
-              <textarea class="form-control" id="message" name="message" rows="4" [(ngModel)]="contactData['message']"></textarea>
+              <textarea class="form-control" id="message" name="message" rows="4" [(ngModel)]="contactData.message"></textarea>
             </div>
 
             <!-- Submit Button -->
             <button type="submit" class="btn btn-primary w-100">Submit</button>
           </form>
+
         </div>
       </div>
 
